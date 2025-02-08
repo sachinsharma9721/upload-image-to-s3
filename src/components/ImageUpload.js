@@ -20,8 +20,8 @@ const ImageUpload = () => {
         const img = new Image();
         img.src = URL.createObjectURL(file);
         img.onload = () => {
-            if (img.width > 1920 || img.height > 1080) {
-                setMessage("Image dimensions must be below 1920x1080");
+            if (img.width > 1280 || img.height > 720 ) {
+                setMessage("Image dimensions must be below 1280x720");
             } else {
                 setSelectedFile(file);
                 setMessage("");
@@ -57,7 +57,7 @@ const ImageUpload = () => {
                 <div>
                     <h2>Choose a file & upload it here</h2>
                     <span className="small-grey-text">
-                        Image size should be up to 2MB, with dimensions not exceeding 1920x1080 pixels.
+                        Image size should be up to 2MB, with dimensions not exceeding 1280x720 pixels.
                     </span>
                 </div>
             </div>
